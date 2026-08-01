@@ -1,0 +1,82 @@
+name: XIOR Zernike watcher
+
+# GitHub's minimum cron granularity is 5 minutes, and scheduled runs are often
+# delayed under load. So each run stays alive for ~4.5 minutes and polls every
+# 60s internally - that gives roughly 1-minute resolution from a 5-minute cron.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      test_notify:
+        description: "Send a test notification instead of checking"
+        type: boolean
+        default: false
+
+# Never let two runs fight over the state file. Newer run waits rather than
+# cancelling, so a check is never silently dropped.
+concurrency:
+  group: xior-watch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      # fetch-depth: 0 because the state-persist step may need to rebase onto a
+      # commit pushed by an overlapping run; rebase on a shallow clone fails.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send test notification
+        if: inputs.test_notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python3 xior_watch.py --test-notify
+
+      - name: Watch for availability
+        if: ${{ !inputs.test_notify }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        # These numbers are measured, not guessed. A pass takes ~30s (the two
+        # properties are spaced 25s apart); a 60s interval gives a full cycle
+        # every ~90s, which was verified sustainable against the live endpoint
+        # for 16/16 consecutive requests with zero 429s. Do not tighten this
+        # without re-measuring - the limiter trips at ~3 requests per 10s and
+        # being blocked means seeing nothing at all.
+        run: python3 xior_watch.py --loop 250 --interval 60
+
+      - name: Persist state
+        if: ${{ always() && !inputs.test_notify }}
+        run: |
+          if [[ -z "$(git status --porcelain state/)" ]]; then
+            echo "no state change"
+            exit 0
+          fi
+          git config user.name  "xior-watcher[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          git commit -m "state: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Another run may have pushed while we were checking.
+          for i in 1 2 3 4 5; do
+            if git push; then echo pushed; exit 0; fi
+            echo "push rejected, rebasing (attempt $i)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || git rebase --abort
+            sleep $((RANDOM % 5 + 2))
+          done
+          echo "::warning::could not push state; next run will re-detect"

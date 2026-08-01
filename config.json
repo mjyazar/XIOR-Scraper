@@ -1,0 +1,36 @@
+{
+  "_comment": "page_id / semester_id are only fallbacks. The watcher re-scrapes them from the live page every page_refresh_minutes, so a new booking term is picked up automatically.",
+
+  "page_refresh_minutes": 20,
+  "heartbeat_hours": 24,
+
+  "_ratelimit_note": "XIOR returns HTTP 429 'Too many requests' per IP on the availability endpoint, and keeps limiting while you keep knocking. On 429 the watcher stops calling that target entirely until the cooldown expires - backing off fully is what restores service fastest.",
+  "ratelimit_cooldown_seconds": 600,
+  "ratelimit_cooldown_max": 3600,
+  "ratelimit_alert_after": 6,
+
+  "error_alert_after": 12,
+
+  "targets": [
+    {
+      "key": "zernike-long",
+      "label": "Zernike Tower (long stay)",
+      "url": "https://www.xiorstudenthousing.eu/netherlands/groningen/zernike-tower-student-accommodation/",
+      "page_id": "1119",
+      "semester_id": "3281",
+      "_building_code": "p0195447",
+      "_yardi_property_id": "185181",
+      "_room_types": { "29907": "Comfy", "32267": "Deluxe" }
+    },
+    {
+      "key": "zernike-short",
+      "label": "Zernike Tower (short stay)",
+      "url": "https://www.xiorstudenthousing.eu/netherlands/groningen/zernike-tower-short-stay/",
+      "page_id": "1118",
+      "semester_id": "18429",
+      "_building_code": "p0195446",
+      "_yardi_property_id": "185180",
+      "_room_types": { "32268": "Comfy", "32269": "Deluxe" }
+    }
+  ]
+}
