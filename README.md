@@ -8,6 +8,21 @@ Runs 24/7 on free infrastructure.
 
 ---
 
+## Quick start
+
+```bash
+python3 setup_telegram.py <your-bot-token>   # get your chat id
+gh auth login                                # one time
+./push_to_github.sh                          # create repo, push, set secrets, test
+```
+
+`push_to_github.sh` creates the repo, pushes, grants the workflow write access,
+prompts for your notification secrets (hidden input, straight into GitHub's
+encrypted store) and fires a test notification. The sections below explain each
+step if you'd rather do it by hand.
+
+---
+
 ## Deployment
 
 **GitHub Actions is the primary runner.** The endpoint rate-limits per IP
@@ -188,6 +203,7 @@ applications or enter personal or payment details.
 ```
 xior_watch.py               Watcher (stdlib only, no dependencies)
 setup_telegram.py           Finds your Telegram chat id
+push_to_github.sh           One-shot repo creation + secrets + test run
 config.json                 Targets and tuning
 state/state.json            Seen units, cached ids, cooldowns
 .github/workflows/watch.yml GitHub Actions runner
