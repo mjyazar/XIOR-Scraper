@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+.claude/settings.local.json
+
+# Local-only secrets. Never commit these - use GitHub Actions secrets or
+# `wrangler secret put` instead.
+.env
+.dev.vars
+
+# Local engineering notes - deliberately kept out of the public repo.
+NOTES-local.md
+
+cloudflare/node_modules/
+cloudflare/.wrangler/

@@ -1,0 +1,27 @@
+name = "xior-watcher"
+main = "worker.js"
+compatibility_date = "2025-09-01"
+
+# Every 2 minutes rather than every minute, deliberately.
+#
+# XIOR rate-limits this endpoint per IP (HTTP 429). GitHub Actions gets a fresh
+# runner IP each run, which spreads load naturally; a Worker egresses from a
+# comparatively stable pool of Cloudflare IPs, so sustained 1/min polling is
+# more likely to trip the limiter and go blind. Two minutes is the safer
+# trade. Raise to "* * * * *" only if you are seeing no 429s in `wrangler tail`.
+[triggers]
+crons = ["*/2 * * * *"]
+
+# Create with:  wrangler kv namespace create XIOR_STATE
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "XIOR_STATE"
+id = "PASTE_YOUR_KV_NAMESPACE_ID_HERE"
+
+# Secrets are NOT set here - they would end up in git. Set them with:
+#   wrangler secret put TELEGRAM_BOT_TOKEN
+#   wrangler secret put TELEGRAM_CHAT_ID
+#   wrangler secret put NTFY_TOPIC
+#   wrangler secret put WATCH_SECRET
+[observability]
+enabled = true
