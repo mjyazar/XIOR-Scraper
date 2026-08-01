@@ -2,13 +2,15 @@
 """
 Find your Telegram chat id, with diagnostics for the usual failure modes.
 
+    python3 setup_telegram.py
+
+Run it with no arguments and it prompts for the token with hidden input, which
+keeps it out of your shell history. You can also pass it directly if you prefer:
+
     python3 setup_telegram.py 8123456789:AAHx9y_YourRealTokenHere
 
-Then export both values and test the watcher:
-
-    export TELEGRAM_BOT_TOKEN=...
-    export TELEGRAM_CHAT_ID=...
-    python3 xior_watch.py --test-notify
+Message the bot from every Telegram account you want alerted, then run this -
+it prints a combined TELEGRAM_CHAT_ID covering all of them.
 """
 
 import json
@@ -41,12 +43,23 @@ def api(token, method):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("usage: python3 setup_telegram.py <BOT_TOKEN>")
-        print(HINT)
-        return 2
-
-    token = sys.argv[1].strip()
+    if len(sys.argv) >= 2:
+        token = sys.argv[1].strip()
+    else:
+        # Prompted rather than passed as an argument: nothing to fumble, and the
+        # token stays out of shell history (~/.zsh_history is a real leak path).
+        import getpass
+        print("Paste your bot token from @BotFather (input is hidden), then Enter.",
+              flush=True)
+        try:
+            token = getpass.getpass("token: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return 2
+        if not token:
+            print("Nothing entered.")
+            print(HINT)
+            return 2
 
     # Catch the mistakes that produce a confusing 404 before calling the API.
     if token.startswith("<") or token.endswith(">"):
