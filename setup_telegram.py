@@ -16,6 +16,7 @@ it prints a combined TELEGRAM_CHAT_ID covering all of them.
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 HINT = """
@@ -28,10 +29,16 @@ How to get the token:
 """
 
 
-def api(token, method):
+def send(token, chat_id, text):
+    """Post a plain-text message. No parse_mode - see xior_watch.notify()."""
+    data = urllib.parse.urlencode({"chat_id": chat_id, "text": text}).encode()
+    return api(token, "sendMessage", data)
+
+
+def api(token, method, data=None):
     url = f"https://api.telegram.org/bot{token}/{method}"
     try:
-        with urllib.request.urlopen(url, timeout=20) as r:
+        with urllib.request.urlopen(url, data, timeout=20) as r:
             return json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
         try:
@@ -132,18 +139,40 @@ def main():
     print("Use this as TELEGRAM_CHAT_ID (alerts every one of them):")
     print()
     print(f"  {combined}")
+
+    # Send the test straight from here. The token is already in memory, so this
+    # avoids making you re-enter it - and avoids printing a shell command with
+    # a <placeholder> in it, which zsh parses as a redirect and refuses to run.
     print()
-    print("Set and test with:")
+    print("Sending a test message to each account now...")
     print()
-    # The token is deliberately not echoed - terminal output gets pasted into
-    # chats and issue trackers, and that is how tokens leak.
-    print('  export TELEGRAM_BOT_TOKEN="<the token you just passed>"')
-    print(f'  export TELEGRAM_CHAT_ID="{combined}"')
-    print("  python3 xior_watch.py --test-notify")
+    all_ok = True
+    for cid, chat in chats.items():
+        who = chat.get("first_name") or chat.get("username") or chat.get("title") or ""
+        r = send(token, cid,
+                 "XIOR watcher test\n\n"
+                 "This account is set up correctly.\n"
+                 "You will get a message like this the moment a room appears.")
+        if r.get("ok"):
+            print(f"  delivered to {cid} ({who})")
+        else:
+            all_ok = False
+            print(f"  FAILED  {cid} ({who}): "
+                  f"{r.get('error_code')} {r.get('description')}")
+
     print()
-    print("To add another Telegram account: message the bot from that account,")
-    print("then run this script again - it will include the new id above.")
-    return 0
+    if all_ok:
+        print("Check each phone - every account above should have the message.")
+    else:
+        print("At least one account did not receive it; see the error above.")
+
+    print()
+    print("Next: put that TELEGRAM_CHAT_ID into GitHub with ./push_to_github.sh")
+    print("      (it prompts for it, so nothing gets pasted into your shell).")
+    print()
+    print("To add another Telegram account later: message the bot from that")
+    print("account, then run this script again.")
+    return 0 if all_ok else 1
 
 
 if __name__ == "__main__":
