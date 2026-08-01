@@ -107,17 +107,29 @@ def main():
         return 1
 
     print()
+    print(f"Found {len(chats)} chat(s) that have messaged this bot:")
     for cid, chat in chats.items():
         who = chat.get("username") or chat.get("title") or chat.get("first_name") or ""
-        print(f"  TELEGRAM_CHAT_ID = {cid}   ({chat.get('type')}  {who})")
+        print(f"  {cid}   ({chat.get('type')}  {who})")
 
-    cid = list(chats)[0]
+    # Several ids are supported, comma separated - the watcher alerts all of
+    # them, so every phone/account you own gets the message.
+    combined = ",".join(str(c) for c in chats)
     print()
-    print("Set these, then test:")
+    print("Use this as TELEGRAM_CHAT_ID (alerts every one of them):")
     print()
-    print(f'  export TELEGRAM_BOT_TOKEN="{token}"')
-    print(f'  export TELEGRAM_CHAT_ID="{cid}"')
+    print(f"  {combined}")
+    print()
+    print("Set and test with:")
+    print()
+    # The token is deliberately not echoed - terminal output gets pasted into
+    # chats and issue trackers, and that is how tokens leak.
+    print('  export TELEGRAM_BOT_TOKEN="<the token you just passed>"')
+    print(f'  export TELEGRAM_CHAT_ID="{combined}"')
     print("  python3 xior_watch.py --test-notify")
+    print()
+    print("To add another Telegram account: message the bot from that account,")
+    print("then run this script again - it will include the new id above.")
     return 0
 
 

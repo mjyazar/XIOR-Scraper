@@ -312,8 +312,13 @@ def notify(title, body, url=None, priority="high"):
     results = []
 
     token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-    chat = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
-    if token and chat:
+    # Accepts several ids, comma or space separated, so one bot can alert every
+    # device/account you own. Two phones is two chances to catch the one
+    # notification that matters.
+    chats = [c for c in re.split(r"[,\s]+", os.environ.get("TELEGRAM_CHAT_ID", "")) if c]
+    for chat in chats:
+        if not token:
+            break
         # Sent as plain text with no parse_mode on purpose. Apartment names and
         # Yardi URLs routinely contain _ * [ ] ( ) . - which Telegram's Markdown
         # parser rejects with a 400, and a formatting nicety is not worth a
@@ -327,7 +332,7 @@ def notify(title, body, url=None, priority="high"):
             {"chat_id": chat, "text": text[:4000]},
             form=True,
         )
-        results.append(("telegram", ok, info))
+        results.append((f"telegram[{chat}]", ok, info))
 
     topic = os.environ.get("NTFY_TOPIC", "").strip()
     if topic:

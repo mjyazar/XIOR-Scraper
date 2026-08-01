@@ -190,16 +190,20 @@ async function notify(env, title, body, url, priority = "high") {
     // formatting is not worth a silently undelivered "room available" alert.
     let text = `${title}\n\n${body}`;
     if (url && !body.includes(url)) text += `\n\n${url}`;
-    jobs.push(
-      fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          chat_id: env.TELEGRAM_CHAT_ID,
-          text: text.slice(0, 4000),
-        }),
-      }).then((r) => ["telegram", r.ok, r.status]).catch((e) => ["telegram", false, String(e)])
-    );
+    // Several ids allowed (comma or space separated) so one bot can alert
+    // every device/account you own.
+    const chats = env.TELEGRAM_CHAT_ID.split(/[,\s]+/).filter(Boolean);
+    for (const chat of chats) {
+      jobs.push(
+        fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ chat_id: chat, text: text.slice(0, 4000) }),
+        })
+          .then((r) => [`telegram[${chat}]`, r.ok, r.status])
+          .catch((e) => [`telegram[${chat}]`, false, String(e)])
+      );
+    }
   }
 
   if (env.NTFY_TOPIC) {
