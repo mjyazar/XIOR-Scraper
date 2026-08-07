@@ -1,17 +1,17 @@
 {
-  "last_heartbeat": "2026-08-06T09:30:39Z",
+  "last_heartbeat": "2026-08-07T09:42:19Z",
   "targets": {
     "zernike-long": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-07T08:46:59Z",
+      "last_check": "2026-08-07T09:45:08Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-07T08:46:59Z",
+      "last_good_check": "2026-08-07T09:45:08Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-07T08:46:53Z",
       "last_unit_count": 0,
       "page_id": "1119",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -23,15 +23,15 @@
     },
     "zernike-short": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-07T08:47:25Z",
+      "last_check": "2026-08-07T09:45:45Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-07T08:47:25Z",
+      "last_good_check": "2026-08-07T09:45:45Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-07T08:43:51Z",
       "last_unit_count": 0,
       "page_id": "1118",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
