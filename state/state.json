@@ -3,10 +3,10 @@
   "targets": {
     "zernike-long": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-07T09:45:08Z",
+      "last_check": "2026-08-07T10:36:34Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-07T09:45:08Z",
+      "last_good_check": "2026-08-07T10:36:34Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-07T08:46:53Z",
       "last_unit_count": 0,
@@ -23,10 +23,10 @@
     },
     "zernike-short": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-07T09:45:45Z",
+      "last_check": "2026-08-07T10:37:09Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-07T09:45:45Z",
+      "last_good_check": "2026-08-07T10:37:09Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-07T08:43:51Z",
       "last_unit_count": 0,
