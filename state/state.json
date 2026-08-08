@@ -2,16 +2,16 @@
   "last_heartbeat": "2026-08-08T09:58:01Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 1,
-      "last_check": "2026-08-08T13:37:15Z",
+      "consecutive_errors": 2,
+      "last_check": "2026-08-08T14:13:09Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-08T13:35:31Z",
+      "last_good_check": "2026-08-08T14:10:50Z",
       "last_outcome": "ERROR",
-      "last_page_scrape": "2026-08-08T11:59:48Z",
+      "last_page_scrape": "2026-08-08T14:09:01Z",
       "last_unit_count": 0,
       "page_id": "1119",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -22,16 +22,16 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 1,
-      "last_check": "2026-08-08T13:37:53Z",
+      "consecutive_errors": 5,
+      "last_check": "2026-08-08T14:13:42Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
       "last_good_check": "2026-08-08T13:36:08Z",
       "last_outcome": "ERROR",
-      "last_page_scrape": "2026-08-08T11:58:35Z",
+      "last_page_scrape": "2026-08-08T14:09:37Z",
       "last_unit_count": 0,
       "page_id": "1118",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
