@@ -3,12 +3,12 @@
   "targets": {
     "zernike-long": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-12T20:24:49Z",
+      "last_check": "2026-08-12T21:11:16Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-12T20:24:49Z",
+      "last_good_check": "2026-08-12T21:11:16Z",
       "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-08-12T20:20:39Z",
+      "last_page_scrape": "2026-08-12T21:09:36Z",
       "last_unit_count": 0,
       "page_id": "1119",
       "page_scrape_error": null,
@@ -24,10 +24,10 @@
     "zernike-short": {
       "consecutive_errors": 0,
       "last_available": "2026-08-11T03:13:39Z",
-      "last_check": "2026-08-12T20:25:17Z",
+      "last_check": "2026-08-12T21:11:51Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-12T20:25:17Z",
+      "last_good_check": "2026-08-12T21:11:51Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-12T20:21:15Z",
       "last_unit_count": 0,
@@ -35,7 +35,7 @@
         "#1-104 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
