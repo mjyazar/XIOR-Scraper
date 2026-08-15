@@ -3,12 +3,12 @@
   "targets": {
     "zernike-long": {
       "consecutive_errors": 0,
-      "last_check": "2026-08-15T20:16:35Z",
+      "last_check": "2026-08-15T20:41:55Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-15T20:16:35Z",
+      "last_good_check": "2026-08-15T20:41:55Z",
       "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-08-15T20:15:37Z",
+      "last_page_scrape": "2026-08-15T20:37:44Z",
       "last_unit_count": 0,
       "page_id": "1119",
       "page_scrape_error": null,
@@ -24,12 +24,12 @@
     "zernike-short": {
       "consecutive_errors": 0,
       "last_available": "2026-08-11T03:13:39Z",
-      "last_check": "2026-08-15T20:17:00Z",
+      "last_check": "2026-08-15T20:42:27Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-08-15T20:17:00Z",
+      "last_good_check": "2026-08-15T20:42:27Z",
       "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-08-15T20:16:06Z",
+      "last_page_scrape": "2026-08-15T20:38:16Z",
       "last_unit_count": 0,
       "last_units": [
         "#1-104 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]"
