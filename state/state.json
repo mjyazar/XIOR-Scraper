@@ -2,12 +2,12 @@
   "last_heartbeat": "2026-08-16T11:57:08Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 3,
-      "last_check": "2026-08-17T10:49:21Z",
-      "last_detail": "http 403",
-      "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-17T10:11:43Z",
-      "last_outcome": "ERROR",
+      "consecutive_errors": 0,
+      "last_check": "2026-08-17T11:08:35Z",
+      "last_detail": "no units (204)",
+      "last_error": null,
+      "last_good_check": "2026-08-17T11:08:35Z",
+      "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-17T10:49:15Z",
       "last_unit_count": 0,
       "page_id": "1119",
@@ -22,13 +22,13 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 1,
+      "consecutive_errors": 0,
       "last_available": "2026-08-11T03:13:39Z",
-      "last_check": "2026-08-17T10:49:52Z",
-      "last_detail": "http 403",
-      "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-17T10:48:15Z",
-      "last_outcome": "ERROR",
+      "last_check": "2026-08-17T11:09:04Z",
+      "last_detail": "no units (204)",
+      "last_error": null,
+      "last_good_check": "2026-08-17T11:09:04Z",
+      "last_outcome": "EMPTY",
       "last_page_scrape": "2026-08-17T10:49:46Z",
       "last_unit_count": 0,
       "last_units": [
