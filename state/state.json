@@ -2,14 +2,14 @@
   "last_heartbeat": "2026-08-20T12:45:33Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 0,
+      "consecutive_errors": 1,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-08-21T00:07:21Z",
-      "last_detail": "no units (204)",
-      "last_error": null,
-      "last_good_check": "2026-08-21T00:07:21Z",
-      "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-08-20T23:50:45Z",
+      "last_check": "2026-08-21T01:55:30Z",
+      "last_detail": "http 403",
+      "last_error": "ERROR: http 403",
+      "last_good_check": "2026-08-21T01:54:30Z",
+      "last_outcome": "ERROR",
+      "last_page_scrape": "2026-08-21T01:51:20Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
@@ -27,16 +27,17 @@
     },
     "zernike-short": {
       "consecutive_errors": 0,
-      "last_available": "2026-08-11T03:13:39Z",
-      "last_check": "2026-08-21T00:07:53Z",
-      "last_detail": "no units (204)",
+      "last_available": "2026-08-21T01:56:01Z",
+      "last_check": "2026-08-21T01:56:01Z",
+      "last_detail": "2 unit(s)",
       "last_error": null,
-      "last_good_check": "2026-08-21T00:07:53Z",
-      "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-08-20T23:49:35Z",
-      "last_unit_count": 0,
+      "last_good_check": "2026-08-21T01:56:01Z",
+      "last_outcome": "AVAILABLE",
+      "last_page_scrape": "2026-08-21T01:51:52Z",
+      "last_unit_count": 2,
       "last_units": [
-        "#1-104 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]"
+        "#1-099 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]",
+        "#1-211 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
       "page_scrape_error": null,
@@ -46,7 +47,10 @@
         "32268",
         "32269"
       ],
-      "seen_unit_ids": [],
+      "seen_unit_ids": [
+        "361246",
+        "361358"
+      ],
       "semester_id": "18429"
     }
   }
