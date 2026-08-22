@@ -2,20 +2,20 @@
   "last_heartbeat": "2026-08-21T12:51:56Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 4,
+      "consecutive_errors": 0,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-08-22T01:25:05Z",
-      "last_detail": "http 403",
-      "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-22T00:02:37Z",
-      "last_outcome": "ERROR",
-      "last_page_scrape": "2026-08-21T23:43:21Z",
+      "last_check": "2026-08-22T02:33:42Z",
+      "last_detail": "no units (204)",
+      "last_error": null,
+      "last_good_check": "2026-08-22T02:33:42Z",
+      "last_outcome": "EMPTY",
+      "last_page_scrape": "2026-08-22T02:29:32Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1119",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -26,20 +26,20 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 5,
+      "consecutive_errors": 0,
       "last_available": "2026-08-21T13:39:31Z",
-      "last_check": "2026-08-22T01:25:38Z",
-      "last_detail": "http 403",
-      "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-22T00:01:35Z",
-      "last_outcome": "ERROR",
-      "last_page_scrape": "2026-08-21T23:45:41Z",
+      "last_check": "2026-08-22T02:34:11Z",
+      "last_detail": "no units (204)",
+      "last_error": null,
+      "last_good_check": "2026-08-22T02:34:11Z",
+      "last_outcome": "EMPTY",
+      "last_page_scrape": "2026-08-22T02:30:06Z",
       "last_unit_count": 0,
       "last_units": [
         "#1-099 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/09/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
