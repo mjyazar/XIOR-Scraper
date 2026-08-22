@@ -4,10 +4,10 @@
     "zernike-long": {
       "consecutive_errors": 1,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-08-21T23:46:53Z",
+      "last_check": "2026-08-22T00:03:47Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-21T23:45:05Z",
+      "last_good_check": "2026-08-22T00:02:37Z",
       "last_outcome": "ERROR",
       "last_page_scrape": "2026-08-21T23:43:21Z",
       "last_unit_count": 0,
@@ -15,7 +15,7 @@
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1119",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -26,12 +26,12 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 1,
+      "consecutive_errors": 2,
       "last_available": "2026-08-21T13:39:31Z",
-      "last_check": "2026-08-21T23:47:21Z",
+      "last_check": "2026-08-22T00:04:21Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
-      "last_good_check": "2026-08-21T23:45:48Z",
+      "last_good_check": "2026-08-22T00:01:35Z",
       "last_outcome": "ERROR",
       "last_page_scrape": "2026-08-21T23:45:41Z",
       "last_unit_count": 0,
