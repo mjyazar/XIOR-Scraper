@@ -1,10 +1,10 @@
 {
-  "last_heartbeat": "2026-09-05T11:54:10Z",
+  "last_heartbeat": "2026-09-06T14:24:25Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 3,
+      "consecutive_errors": 6,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-09-06T11:44:23Z",
+      "last_check": "2026-09-06T14:27:23Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
       "last_good_check": "2026-09-06T07:23:30Z",
@@ -15,7 +15,7 @@
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1119",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -26,9 +26,9 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 3,
+      "consecutive_errors": 6,
       "last_available": "2026-09-06T07:24:02Z",
-      "last_check": "2026-09-06T11:44:56Z",
+      "last_check": "2026-09-06T14:28:01Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
       "last_good_check": "2026-09-06T07:24:02Z",
@@ -39,7 +39,7 @@
         "#1-219 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
