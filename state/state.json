@@ -2,14 +2,14 @@
   "last_heartbeat": "2026-09-07T15:49:37Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 40,
+      "consecutive_errors": 44,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-09-07T19:28:57Z",
+      "last_check": "2026-09-07T22:12:37Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
       "last_good_check": "2026-09-06T07:23:30Z",
       "last_outcome": "ERROR",
-      "last_page_scrape": "2026-09-07T19:24:44Z",
+      "last_page_scrape": "2026-09-07T22:08:25Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
@@ -26,14 +26,14 @@
       "semester_id": "3281"
     },
     "zernike-short": {
-      "consecutive_errors": 40,
+      "consecutive_errors": 44,
       "last_available": "2026-09-06T07:24:02Z",
-      "last_check": "2026-09-07T19:29:28Z",
+      "last_check": "2026-09-07T22:13:09Z",
       "last_detail": "http 403",
       "last_error": "ERROR: http 403",
       "last_good_check": "2026-09-06T07:24:02Z",
       "last_outcome": "ERROR",
-      "last_page_scrape": "2026-09-07T19:25:18Z",
+      "last_page_scrape": "2026-09-07T22:09:00Z",
       "last_unit_count": 1,
       "last_units": [
         "#1-219 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/10/2026 | [Notice Unrented]"
