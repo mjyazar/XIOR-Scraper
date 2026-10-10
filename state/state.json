@@ -4,12 +4,12 @@
     "zernike-long": {
       "consecutive_errors": 0,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-10-10T05:46:09Z",
+      "last_check": "2026-10-10T11:26:43Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-10-10T05:46:09Z",
+      "last_good_check": "2026-10-10T11:26:43Z",
       "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-10-10T05:41:59Z",
+      "last_page_scrape": "2026-10-10T11:22:33Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
@@ -28,12 +28,12 @@
     "zernike-short": {
       "consecutive_errors": 0,
       "last_available": "2026-10-09T09:02:41Z",
-      "last_check": "2026-10-10T05:46:36Z",
+      "last_check": "2026-10-10T11:27:13Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-10-10T05:46:36Z",
+      "last_good_check": "2026-10-10T11:27:13Z",
       "last_outcome": "EMPTY",
-      "last_page_scrape": "2026-10-10T05:42:31Z",
+      "last_page_scrape": "2026-10-10T11:23:01Z",
       "last_unit_count": 0,
       "last_units": [
         "#1-041 | Deluxe | 21m2 | EUR 1391.2-1479.99/mo | from 01/11/2026 | [Notice Unrented]"
