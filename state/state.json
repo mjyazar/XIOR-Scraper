@@ -4,10 +4,10 @@
     "zernike-long": {
       "consecutive_errors": 0,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-10-20T12:12:53Z",
+      "last_check": "2026-10-20T16:59:42Z",
       "last_detail": "no units (204)",
       "last_error": null,
-      "last_good_check": "2026-10-20T12:12:53Z",
+      "last_good_check": "2026-10-20T16:59:42Z",
       "last_outcome": "EMPTY",
       "last_page_scrape": "2026-10-20T12:08:44Z",
       "last_unit_count": 0,
@@ -15,7 +15,7 @@
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1119",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -27,20 +27,19 @@
     },
     "zernike-short": {
       "consecutive_errors": 0,
-      "last_available": "2026-10-20T12:13:23Z",
-      "last_check": "2026-10-20T12:13:23Z",
-      "last_detail": "2 unit(s)",
+      "last_available": "2026-10-20T17:00:15Z",
+      "last_check": "2026-10-20T17:00:15Z",
+      "last_detail": "1 unit(s)",
       "last_error": null,
-      "last_good_check": "2026-10-20T12:13:23Z",
+      "last_good_check": "2026-10-20T17:00:15Z",
       "last_outcome": "AVAILABLE",
       "last_page_scrape": "2026-10-20T12:09:15Z",
-      "last_unit_count": 2,
+      "last_unit_count": 1,
       "last_units": [
-        "#1-041 | Deluxe | 21m2 | EUR 1391.2-1479.99/mo | from 01/11/2026 | [Notice Unrented]",
-        "#1-005 | Comfy | 21m2 | EUR 1369.99-1431.21/mo | from 01/12/2026 | [Notice Unrented]"
+        "#1-041 | Deluxe | 21m2 | EUR 1391.2-1479.99/mo | from 01/11/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
-      "page_scrape_error": null,
+      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -48,7 +47,6 @@
         "32269"
       ],
       "seen_unit_ids": [
-        "361152",
         "361188"
       ],
       "semester_id": "18429"
