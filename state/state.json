@@ -2,20 +2,20 @@
   "last_heartbeat": "2026-11-20T20:03:50Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 10,
+      "consecutive_errors": 14,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-11-21T08:25:38Z",
+      "last_check": "2026-11-21T16:18:51Z",
       "last_detail": "unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-20T12:11:30Z",
       "last_outcome": "BROKEN",
-      "last_page_scrape": "2026-11-20T20:03:14Z",
+      "last_page_scrape": "2026-11-21T16:14:42Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
       ],
       "page_id": "1119",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1665)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
@@ -26,21 +26,21 @@
       "semester_id": ""
     },
     "zernike-short": {
-      "consecutive_errors": 10,
+      "consecutive_errors": 14,
       "last_available": "2026-11-11T10:16:49Z",
-      "last_check": "2026-11-21T08:26:13Z",
+      "last_check": "2026-11-21T16:19:17Z",
       "last_detail": "unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-20T12:12:00Z",
       "last_outcome": "BROKEN",
-      "last_page_scrape": "2026-11-20T20:03:46Z",
+      "last_page_scrape": "2026-11-21T16:15:15Z",
       "last_unit_count": 0,
       "last_units": [
         "#1-016 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/12/2026 | [Notice Unrented]",
         "#1-180 | Comfy | 21m2 | EUR 1369.99-1431.21/mo | from 01/12/2026 | [Notice Unrented]"
       ],
       "page_id": "1118",
-      "page_scrape_error": "page fetch failed (status=403, bytes=1610)",
+      "page_scrape_error": null,
       "rate_limited_until": null,
       "ratelimit_streak": 0,
       "room_type_ids": [
