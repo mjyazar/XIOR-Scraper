@@ -2,9 +2,9 @@
   "last_heartbeat": "2026-11-20T20:03:50Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 7,
+      "consecutive_errors": 10,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-11-21T01:26:01Z",
+      "last_check": "2026-11-21T08:25:38Z",
       "last_detail": "unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-20T12:11:30Z",
@@ -26,9 +26,9 @@
       "semester_id": ""
     },
     "zernike-short": {
-      "consecutive_errors": 7,
+      "consecutive_errors": 10,
       "last_available": "2026-11-11T10:16:49Z",
-      "last_check": "2026-11-21T01:26:34Z",
+      "last_check": "2026-11-21T08:26:13Z",
       "last_detail": "unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-20T12:12:00Z",
