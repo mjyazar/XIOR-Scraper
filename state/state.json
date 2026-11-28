@@ -1,15 +1,15 @@
 {
-  "last_heartbeat": "2026-11-27T03:00:30Z",
+  "last_heartbeat": "2026-11-28T10:56:27Z",
   "targets": {
     "zernike-long": {
-      "consecutive_errors": 88,
+      "consecutive_errors": 92,
       "last_available": "2026-08-18T09:27:48Z",
-      "last_check": "2026-11-28T02:52:55Z",
+      "last_check": "2026-11-28T11:00:04Z",
       "last_detail": "unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185181': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-20T12:11:30Z",
       "last_outcome": "BROKEN",
-      "last_page_scrape": "2026-11-28T02:48:46Z",
+      "last_page_scrape": "2026-11-28T10:55:53Z",
       "last_unit_count": 0,
       "last_units": [
         "#3-173 | Comfy | 21m2 | EUR 816/mo | from 01/10/2026 | [Notice Unrented]"
@@ -26,14 +26,14 @@
       "semester_id": ""
     },
     "zernike-short": {
-      "consecutive_errors": 33,
+      "consecutive_errors": 37,
       "last_available": "2026-11-25T10:26:30Z",
-      "last_check": "2026-11-28T02:53:24Z",
+      "last_check": "2026-11-28T11:00:34Z",
       "last_detail": "unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_error": "BROKEN: unexpected upstream: {'185180': {'errorCode': 204, 'errorMessage': 'Unknown error'}}",
       "last_good_check": "2026-11-25T10:26:30Z",
       "last_outcome": "BROKEN",
-      "last_page_scrape": "2026-11-28T02:49:18Z",
+      "last_page_scrape": "2026-11-28T10:56:22Z",
       "last_unit_count": 1,
       "last_units": [
         "#1-016 | Comfy | 19m2 | EUR 1369.99-1431.21/mo | from 01/12/2026"
